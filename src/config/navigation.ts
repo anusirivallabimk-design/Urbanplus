@@ -1,0 +1,117 @@
+
+import {
+  LayoutDashboard,
+  Map,
+  Compass,
+  ClipboardList,
+  ShieldCheck,
+  BarChart3,
+  Activity,
+  Droplets,
+  Bus,
+  Trees,
+  Landmark,
+  Settings,
+} from 'lucide-react';
+
+export const navSections = [
+  'Overview',
+  'City Exploration',
+  'City Management',
+  'Monitoring',
+  'System',
+];
+
+export const navConfig = [
+  {
+    to: '/overview',
+    label: 'City Overview',
+    icon: LayoutDashboard,
+    section: 'Overview',
+    assigned: false,
+  },
+  {
+    to: '/map',
+    label: 'City Map',
+    icon: Map,
+    section: 'City Exploration',
+    assigned: true,
+  },
+  {
+    to: '/city-explorer',
+    label: 'City Explorer',
+    icon: Compass,
+    section: 'City Exploration',
+    assigned: false,
+  },
+  {
+    to: '/report-issue',
+    label: 'Report Issue',
+    icon: ClipboardList,
+    section: 'City Management',
+    assigned: false,
+  },
+  {
+    to: '/admin/issues',
+    label: 'Admin Issues',
+    icon: ShieldCheck,
+    section: 'City Management',
+    assigned: false,
+  },
+  {
+    to: '/my-reports',
+    label: 'My Reports',
+    icon: ClipboardList,
+    section: 'City Management',
+    assigned: false,
+  },
+  {
+    to: '/analytics',
+    label: 'Analytics',
+    icon: BarChart3,
+    section: 'Monitoring',
+    assigned: false,
+  },
+  {
+    to: '/monitoring',
+    label: 'Live Monitoring',
+    icon: Activity,
+    section: 'Monitoring',
+    assigned: true,
+  },
+  {
+    to: '/utilities',
+    label: 'Public Utilities',
+    icon: Droplets,
+    section: 'Monitoring',
+    assigned: false,
+  },
+  {
+    to: '/transport',
+    label: 'Transport',
+    icon: Bus,
+    section: 'Monitoring',
+    assigned: false,
+  },
+  {
+    to: '/green-spaces',
+    label: 'Green Spaces',
+    icon: Trees,
+    section: 'Monitoring',
+    assigned: false,
+  },
+  {
+    to: '/heritage',
+    label: 'Tourism & Heritage',
+    icon: Landmark,
+    section: 'Monitoring',
+    assigned: false,
+  },
+  {
+    to: '/settings',
+    label: 'Settings',
+    icon: Settings,
+    section: 'System',
+    assigned: false,
+  },
+];

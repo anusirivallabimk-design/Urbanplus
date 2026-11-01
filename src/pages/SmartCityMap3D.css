@@ -1,0 +1,293 @@
+
+/* URBANPULSE — 3D DIGITAL TWIN */
+
+.smart-map-3d-page {
+    min-height: 100vh;
+    padding: 32px;
+    color: #F5F1FA;
+    background: #09090D;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .smart-map-3d-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+  
+  .smart-map-3d-eyebrow {
+    color: #C6A15B;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+  }
+  
+  .smart-map-3d-heading h1 {
+    margin: 0 0 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 400;
+    letter-spacing: -1.5px;
+  }
+  
+  .smart-map-3d-heading h1 span {
+    color: #C6A15B;
+    font-style: italic;
+  }
+  
+  .smart-map-3d-intro {
+    max-width: 600px;
+    color: #B8ADBF;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  
+  .smart-map-3d-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 14px;
+    border: 1px solid rgba(198, 161, 91, 0.3);
+    border-radius: 30px;
+    color: #E1C68F;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    white-space: nowrap;
+  }
+  
+  .smart-map-3d-status i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #9EBA91;
+    box-shadow: 0 0 9px #9EBA91;
+  }
+  
+  .smart-map-3d-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  
+  .smart-map-3d-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: min(440px, 100%);
+    padding: 5px 6px 5px 14px;
+    border: 1px solid rgba(198, 161, 91, 0.25);
+    border-radius: 8px;
+    background: #15121A;
+  }
+  
+  .smart-map-3d-search > span {
+    color: #C6A15B;
+    font-size: 23px;
+  }
+  
+  .smart-map-3d-search input {
+    flex: 1;
+    min-width: 0;
+    padding: 11px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #F5F1FA;
+    font-size: 12px;
+  }
+  
+  .smart-map-3d-search input::placeholder {
+    color: #82788C;
+  }
+  
+  .smart-map-3d-search button {
+    padding: 11px 17px;
+    border: none;
+    border-radius: 5px;
+    background: #C6A15B;
+    color: #09090D;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .smart-map-3d-search button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .smart-map-3d-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .smart-map-3d-controls button {
+    padding: 10px 13px;
+    border: 1px solid rgba(198, 161, 91, 0.22);
+    border-radius: 6px;
+    background: transparent;
+    color: #B8ADBF;
+    font-size: 10px;
+    cursor: pointer;
+  }
+  
+  .smart-map-3d-controls button.active {
+    border-color: #C6A15B;
+    background: rgba(198, 161, 91, 0.1);
+    color: #E6C98E;
+  }
+  
+  .smart-map-3d-controls button:hover {
+    border-color: #C6A15B;
+  }
+  
+  .smart-map-3d-message {
+    margin: 10px 0;
+    color: #D9C7A3;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  
+  .smart-map-3d-container {
+    position: relative;
+    width: 100%;
+    height: min(70vh, 720px);
+    min-height: 440px;
+    overflow: hidden;
+    border: 1px solid rgba(198, 161, 91, 0.25);
+    border-radius: 12px;
+    background: #171020;
+  }
+  
+  .smart-map-3d-canvas {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .smart-map-3d-loading {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #171020;
+    color: #D9C7A3;
+    font-size: 13px;
+    pointer-events: none;
+  }
+  
+  .smart-map-3d-map-label {
+    position: absolute;
+    left: 18px;
+    bottom: 18px;
+    z-index: 2;
+    padding: 9px 12px;
+    border: 1px solid rgba(198, 161, 91, 0.3);
+    border-radius: 5px;
+    background: rgba(9, 9, 13, 0.85);
+    color: #E4C98E;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    pointer-events: none;
+  }
+  
+  .smart-map-3d-note {
+    margin-top: 13px;
+    color: #82788C;
+    font-size: 10px;
+    line-height: 1.7;
+  }
+  
+  .urbanpulse-3d-popup {
+    min-width: 160px;
+    color: #F5F1FA;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .urbanpulse-3d-popup span {
+    display: block;
+    margin-bottom: 7px;
+    color: #C6A15B;
+    font-size: 9px;
+    letter-spacing: 1.2px;
+  }
+  
+  .urbanpulse-3d-popup strong {
+    display: block;
+    font-size: 13px;
+  }
+  
+  .urbanpulse-3d-popup p {
+    margin: 7px 0;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  
+  .urbanpulse-3d-popup small {
+    color: #B8ADBF;
+    font-size: 10px;
+  }
+  
+  .maplibregl-popup-content {
+    padding: 14px;
+    border: 1px solid rgba(198, 161, 91, 0.3);
+    border-radius: 8px;
+    background: #171020;
+    color: #F5F1FA;
+  }
+  
+  .maplibregl-popup-tip {
+    border-top-color: #171020 !important;
+    border-bottom-color: #171020 !important;
+  }
+  
+  .maplibregl-ctrl-group {
+    overflow: hidden;
+    border: 1px solid rgba(198, 161, 91, 0.3) !important;
+    background: #171020 !important;
+  }
+  
+  .maplibregl-ctrl-group button {
+    background-color: #171020 !important;
+  }
+  
+  .maplibregl-ctrl-group button span {
+    filter: invert(1);
+  }
+  
+  @media (max-width: 700px) {
+    .smart-map-3d-page {
+      padding: 20px 14px;
+    }
+  
+    .smart-map-3d-heading {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  
+    .smart-map-3d-heading h1 {
+      font-size: 39px;
+    }
+  
+    .smart-map-3d-toolbar {
+      align-items: stretch;
+      flex-direction: column;
+    }
+  
+    .smart-map-3d-search {
+      width: auto;
+    }
+  
+    .smart-map-3d-container {
+      height: 520px;
+      min-height: 400px;
+    }
+  }
+  

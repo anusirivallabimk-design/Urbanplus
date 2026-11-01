@@ -1,0 +1,54 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #09090D;
+  --bg-secondary: #171020;
+  --bg-card: rgba(28, 21, 39, 0.78);
+
+  --accent-gold: #C6A15B;
+  --accent-violet: #B9A7D9;
+
+  --text-primary: #F5F1FA;
+  --text-secondary: #B8ADBF;
+
+  --border-subtle: rgba(198, 161, 91, 0.22);
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+  --radius-card: 16px;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+}
+
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  backdrop-filter: blur(18px);
+}
+
+.gold-button {
+  background: var(--accent-gold);
+  color: #09090D;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 22px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.gold-button:hover {
+  box-shadow: 0 0 20px rgba(198, 161, 91, 0.3);
+  transform: translateY(-2px);
+}
