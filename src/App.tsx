@@ -1,9 +1,10 @@
 
 import { Routes, Route, Navigate } from 'react-router-dom';
-
+import CityOverview from '@/pages/Cityoverview';
 import Layout from '@/components/layout/Layout';
 import HomePage from '@/pages/HomePage';
-
+import Analytics from './pages/Analytics';
+import GreenSpaces from './pages/GreenSpaces';
 import SmartCityMap from '@/pages/SmartCityMap';
 import SmartCityMap3D from './pages/SmartCityMap3D';
 import CityExplorer from '@/pages/CityExplorer';
@@ -79,19 +80,14 @@ export default function App() {
         }
       />
 
-      {/* City Overview */}
-      <Route
-        path="/overview"
-        element={
-          <Layout>
-            <PlaceholderPage
-              title="City Overview"
-              description="High-level city dashboard and key performance indicators."
-              owner="Member 1"
-            />
-          </Layout>
-        }
-      />
+     <Route
+  path="/overview"
+  element={
+    <Layout>
+      <CityOverview />
+    </Layout>
+  }
+/> 
 
       {/* My Reports */}
       <Route
@@ -112,10 +108,7 @@ export default function App() {
         path="/analytics"
         element={
           <Layout>
-            <PlaceholderPage
-              title="Analytics"
-              description="Trend analysis and data-driven insights across city modules."
-              owner="Member 1"
+            <Analytics
             />
           </Layout>
         }
@@ -168,11 +161,7 @@ export default function App() {
         path="/green-spaces"
         element={
           <Layout>
-            <PlaceholderPage
-              title="Green Spaces"
-              description="Parks, lakes, and urban canopy management."
-              owner="Member 1"
-            />
+            <GreenSpaces />
           </Layout>
         }
       />
