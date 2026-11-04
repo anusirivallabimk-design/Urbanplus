@@ -25,9 +25,9 @@ app.get("/api/health", async (req, res) => {
             database: result.rows[0].database
         });
     } catch (error) {
-        console.error(error.message);
-        res.status(500).json({ error: error.message });
-    }
+    console.error("Database error:", error);
+    res.status(500).json({ error: error.message });
+}
 });
 
 app.get("/api/traffic", async (req, res) => {
@@ -37,7 +37,7 @@ app.get("/api/traffic", async (req, res) => {
         );
         res.json(result.rows);
     } catch (error) {
-        console.error(error.message);
+        console.error("Database error:", error);
         res.status(500).json({ error: error.message });
     }
 });
